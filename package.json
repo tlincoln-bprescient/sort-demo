@@ -1,0 +1,105 @@
+{
+  "name": "sort-demo",
+  "version": "1.0.0",
+  "description": "Example react project",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "NODE_ENV=production webpack build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@app/components": "file:./src/components",
+    "@app/services": "file:./src/services",
+    "@babel/core": "^7.18.6",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.1",
+    "@nivo/bar": "^0.80.0",
+    "@testing-library/react": "^13.3.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testRegex": "src\\/.*\\.(test|spec)\\.js$",
+    "moduleFileExtensions": [
+      "js"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "@babel/eslint-parser",
+    "extends": [
+      "airbnb",
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "globals": {
+      "document": true
+    },
+    "rules": {
+      "arrow-body-style": "warn",
+      "no-unused-vars": "warn",
+      "prefer-const": "warn",
+      "no-trailing-spaces": [
+        1,
+        {
+          "skipBlankLines": true
+        }
+      ],
+      "quotes": "warn",
+      "semi": "warn",
+      "object-curly-newline": 0,
+      "padded-blocks": 0,
+      "import/prefer-default-export": 0,
+      "no-multiple-empty-lines": 0,
+      "no-plusplus": 0,
+      "no-param-reassign": 0,
+      "react/jsx-wrap-multilines": 0,
+      "react/jsx-closing-tag-location": 0,
+      "max-lines": [
+        "warn",
+        120
+      ],
+      "no-console": 0,
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "react/prop-types": 0,
+      "import/no-unresolved": 0,
+      "import/no-extraneous-dependencies": 0,
+      "react/function-component-definition": [
+        "warn",
+        {
+          "namedComponents": "arrow-function"
+        }
+      ],
+      "comma-dangle": 0
+    },
+    "ignorePatterns": [
+      "**/*.test.js"
+    ]
+  }
+}

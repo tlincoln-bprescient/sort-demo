@@ -1,0 +1,23 @@
+version: "3.4"
+
+services:
+  dev:
+    image: node:18-slim
+    env_file:
+      - .env
+    volumes:
+      - "./:/APP/"
+      - "modules:/APP/node_modules/"
+    ports:
+      - "8080:8080"
+    entrypoint: ["/bin/sh","-c"]
+    command:
+      - |
+        cd /APP
+        npm install
+        npm start
+
+# mount a volume to cache node_modules
+# run "docker-compose down -v" to reset
+volumes:
+  modules:
